@@ -30,11 +30,21 @@ h1, h2, div {
     padding: 15px;
 }
 
-.input-group-append {
+footer, .input-group-append {
     text-align: center;
+}
+
+.btn {
+    background-color: grey;
+    border-color: grey;
+
+}
+
+.btn:hover {
+    background-color: darkblue;
+    border-color: darkblue;
 }
 
 footer {
     margin-top: 15px;
-    text-align: center;
 }
