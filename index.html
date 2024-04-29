@@ -19,13 +19,17 @@
     <h1 class>Your Meme Dream Team</h1>
     <h2>You have great memes at your fingertips.</h2>
 
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Find your meme..." aria-label="find-meme">
-    </div>
+    <form id="memeForm" action="." method="get">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Find your meme..." aria-label="find-meme">
+        </div>
 
-    <div class="input-group-append">
-        <button class="btn btn-primary btn-lg" type="button">Search</button>
-    </div>
+        <div class="input-group-append">
+            <button class="btn btn-primary btn-lg" type="button">Search</button>
+        </div>
+    </form>
+
+    <section class="js-display-memes display-memes"></section>
 
     <footer>
         <img src="./images/PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif" alt="Powered by GIPHY">
@@ -36,5 +40,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous">
     </script>
+    <script src = "./js/main.js"></script>
 </body>
 </html>
