@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2, div {
+    padding: 15px;
+}
+
+.input-group-append {
+    text-align: center;
+}
+
+footer {
+    margin-top: 15px;
+    text-align: center;
+}
