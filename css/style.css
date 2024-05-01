@@ -17,7 +17,7 @@ body {
     padding: 15px;
 }
 
-h1, h2, .btn {
+h1, h2, .btn, .form-check-label {
     text-align: center;
     font-family: "Nabla", system-ui;
 }
@@ -34,15 +34,15 @@ footer, .input-group-append {
     text-align: center;
 }
 
-.btn {
+.btn, .form-check-input {
     background-color: grey;
     border-color: grey;
 
 }
 
-.btn:hover {
-    background-color: darkblue;
-    border-color: darkblue;
+.form-check-input:checked, .btn:hover {
+    background-color: lightseagreen;
+    border-color: lightseagreen;
 }
 
 footer {
