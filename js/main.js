@@ -2,6 +2,17 @@ const API_PREFIX_GIFS = "https://api.giphy.com/v1/gifs/search?api_key=";
 const API_PREFIX_STICKERS = "https://api.giphy.com/v1/stickers/search?api_key=";
 const API_KEY = "734eYDXm24Vsbjq8iOtzC0EA1fW9XTyF";
 const API_SETTINGS = "&limit=50&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
+var isChecked = true;
+
+function chooseTheme() {
+    let userTheme = "light";
+    isChecked = !isChecked;
+    if (isChecked === true) {
+        userTheme = "dark";
+    }
+
+    console.log(userTheme);
+}
 
 function getPrompt(event) {
     event.preventDefault();
@@ -32,7 +43,7 @@ function returnImgs(apiText) {
         }
     }
 
-    document.querySelector(".js-display-memes").innerHTML = apiText;
+    document.querySelector(".js-display-memes").innerHTML = htmlFormat;
 
 }
 
@@ -40,4 +51,5 @@ function alertUser(errText) {
     document.querySelector(".js-display-memes").innerHTML = `<div class="alert alert-warning">${errText}</div>`;
 }
 
+document.querySelector("#themeForm").addEventListener("change", chooseTheme);
 document.querySelector("#memeForm").addEventListener("submit", getPrompt);

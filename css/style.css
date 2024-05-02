@@ -30,6 +30,10 @@ h1, h2, div {
     padding: 15px;
 }
 
+.input-group {
+    color: black;
+}
+
 footer, .input-group-append {
     text-align: center;
 }
@@ -43,6 +47,15 @@ footer, .input-group-append {
 .form-check-input:checked, .btn:hover {
     background-color: lightseagreen;
     border-color: lightseagreen;
+}
+
+.display-memes {
+    padding: 15px;
+}
+
+.meme-sticker {
+    height: 200px;
+    padding: 15px;
 }
 
 footer {
