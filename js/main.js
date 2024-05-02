@@ -10,8 +10,6 @@ function chooseTheme() {
     if (isChecked === true) {
         userTheme = "dark";
     }
-
-    console.log(userTheme);
 }
 
 function getPrompt(event) {
