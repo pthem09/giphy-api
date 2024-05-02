@@ -1,3 +1,7 @@
+:root {
+    --bg-color: #000000;
+}
+
 /*****Google font to refernce******/
 
 .nabla-giphy {
@@ -12,7 +16,7 @@
 
 /*****main styles*******/
 body {
-    background-color: black;
+    background-color: var(--bg-color);
     color: white;
     padding: 15px;
 }
