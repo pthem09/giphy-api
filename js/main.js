@@ -6,15 +6,25 @@ const H1_LIGHT_TEXT = "Great Memes All Day";
 const H2_LIGHT_TEXT = "Everyday";
 const H1_DARK_TEXT = "Your Meme Dream Team";
 const H2_DARK_TEXT = "You have great memes at your fingertips";
-var isChecked = true; //default setting for dark mode toggle
+var isDark = true; //default setting for dark mode toggle
+var isGif = true;
 
-changeText(isChecked);
+changeText(isDark);
 
 function chooseTheme() {
-    isChecked = !isChecked;
+    isDark = !isDark;
     document.getElementById("body-theme").classList.toggle("body-light");
     document.getElementById("img-theme").classList.toggle("img-light");
-    changeText(isChecked);
+    changeText(isDark);
+}
+
+function gifBool() {
+    isGif = !isGif;
+    if (isGif === true) {
+        console.log("gif");
+    } else {
+        console.log("sticker");
+    }
 }
 
 function changeText(themeCheck) {
@@ -27,17 +37,26 @@ function changeText(themeCheck) {
     }
 }
 
+function createPrompt() {
+    console.log(document.getElementById("gif-radio").value);
+    console.log(document.getElementById("sticker-radio").value);
+}
+
 function getPrompt(event) {
     event.preventDefault();
     let userSearch = document.querySelector("[name=memeSearch]").value;
     userSearch = userSearch.replace(" ", "+");
-    fetchMemes(userSearch);
+    if (isGif === true) {
+        fetchMemes(userSearch, API_PREFIX_GIFS);
+    } else {
+        fetchMemes(userSearch, API_PREFIX_STICKERS);
+    }
 }
 
-function fetchMemes(textInput) {
-    console.log(`${API_PREFIX_GIFS}${API_KEY}&q=${textInput}${API_SETTINGS}`);
+function fetchMemes(textInput, apiPrefix) {
+    console.log(`${apiPrefix}${API_KEY}&q=${textInput}${API_SETTINGS}`);
     
-    fetch(`${API_PREFIX_GIFS}${API_KEY}&q=${textInput}${API_SETTINGS}`)
+    fetch(`${apiPrefix}${API_KEY}&q=${textInput}${API_SETTINGS}`)
         .then((data) => data.json())
         .then(returnImgs)
         .catch(() => alertUser("Content unavailable."));
@@ -66,3 +85,5 @@ function alertUser(errText) {
 
 document.querySelector("#themeForm").addEventListener("change", chooseTheme);
 document.querySelector("#memeForm").addEventListener("submit", getPrompt);
+document.querySelector("#gif-radio").addEventListener("change", gifBool);
+document.querySelector("#sticker-radio").addEventListener("change", gifBool);
