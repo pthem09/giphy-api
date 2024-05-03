@@ -5,12 +5,15 @@ const API_SETTINGS = "&limit=50&offset=0&rating=g&lang=en&bundle=messaging_non_c
 const H1_LIGHT_TEXT = "Great Memes All Day";
 const H2_LIGHT_TEXT = "Everyday";
 const H1_DARK_TEXT = "Your Meme Dream Team";
-const H2_DARK_TEXT = "You have great memes at your fingertips.";
+const H2_DARK_TEXT = "You have great memes at your fingertips";
 var isChecked = true; //default setting for dark mode toggle
+
+changeText(isChecked);
 
 function chooseTheme() {
     isChecked = !isChecked;
     document.getElementById("body-theme").classList.toggle("body-light");
+    document.getElementById("img-theme").classList.toggle("img-light");
     changeText(isChecked);
 }
 
