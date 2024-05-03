@@ -41,9 +41,9 @@ footer, .input-group-append {
     border-color: grey;
 }
 
-.form-check-input:checked, .btn:hover {
-    background-color: lightseagreen;
-    border-color: lightseagreen;
+.btn:hover, .gif-btn:hover {
+    background-color: rgb(0, 102, 255);
+    border-color: rgb(0, 102, 255);
 }
 
 .display-memes {
@@ -61,4 +61,23 @@ footer {
 
 .img-light {
     filter: invert(1);
+}
+
+.gif-btn {
+    min-width: 350px;
+    min-height: 50px;
+    background-color: grey;
+    border-color: grey;
+    color: white;
+    align-content: center;
+    text-align: center;
+}
+
+.form-check-input:checked, .gif-selected {
+    background-color: blue;
+    border-color: blue;
+}
+
+.gif-btn::after{
+    background-color: orange;
 }

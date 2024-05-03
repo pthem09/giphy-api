@@ -20,11 +20,17 @@ function chooseTheme() {
 
 function gifBool() {
     isGif = !isGif;
+/*    
     if (isGif === true) {
         console.log("gif");
     } else {
         console.log("sticker");
     }
+*/
+
+    document.getElementById("gif-radio-vis").classList.toggle("gif-selected");
+    document.getElementById("sticker-radio-vis").classList.toggle("gif-selected");
+
 }
 
 function changeText(themeCheck) {
@@ -36,12 +42,6 @@ function changeText(themeCheck) {
         document.getElementById("h2-theme-target").innerText = H2_DARK_TEXT;
     }
 }
-
-function createPrompt() {
-    console.log(document.getElementById("gif-radio").value);
-    console.log(document.getElementById("sticker-radio").value);
-}
-
 function getPrompt(event) {
     event.preventDefault();
     let userSearch = document.querySelector("[name=memeSearch]").value;
@@ -54,8 +54,7 @@ function getPrompt(event) {
 }
 
 function fetchMemes(textInput, apiPrefix) {
-    console.log(`${apiPrefix}${API_KEY}&q=${textInput}${API_SETTINGS}`);
-    
+    //console.log(`${apiPrefix}${API_KEY}&q=${textInput}${API_SETTINGS}`);
     fetch(`${apiPrefix}${API_KEY}&q=${textInput}${API_SETTINGS}`)
         .then((data) => data.json())
         .then(returnImgs)
