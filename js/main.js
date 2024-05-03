@@ -2,14 +2,25 @@ const API_PREFIX_GIFS = "https://api.giphy.com/v1/gifs/search?api_key=";
 const API_PREFIX_STICKERS = "https://api.giphy.com/v1/stickers/search?api_key=";
 const API_KEY = "734eYDXm24Vsbjq8iOtzC0EA1fW9XTyF";
 const API_SETTINGS = "&limit=50&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
+const H1_LIGHT_TEXT = "Great Memes All Day";
+const H2_LIGHT_TEXT = "Everyday";
+const H1_DARK_TEXT = "Your Meme Dream Team";
+const H2_DARK_TEXT = "You have great memes at your fingertips.";
 var isChecked = true; //default setting for dark mode toggle
 
 function chooseTheme() {
     isChecked = !isChecked;
-    if (isChecked === true) {
-        document.querySelector(':root').style.setProperty("--bg-color", "#000000");
+    document.getElementById("body-theme").classList.toggle("body-light");
+    changeText(isChecked);
+}
+
+function changeText(themeCheck) {
+    if (themeCheck === false) {
+        document.getElementById("h1-theme-target").innerText = H1_LIGHT_TEXT;
+        document.getElementById("h2-theme-target").innerText = H2_LIGHT_TEXT;
     } else {
-        document.querySelector(':root').style.setProperty("--bg-color", "#ffffff");
+        document.getElementById("h1-theme-target").innerText = H1_DARK_TEXT;
+        document.getElementById("h2-theme-target").innerText = H2_DARK_TEXT;
     }
 }
 
