@@ -64,6 +64,7 @@ function fetchMemes(textInput, apiPrefix) {
 function returnImgs(apiText) {
     let htmlFormat = "";
 
+    //console.log(apiText.data.length);
     if (apiText.data.length === 0 ){
         alertUser("No results -- try another search.");
     } else {
@@ -72,16 +73,12 @@ function returnImgs(apiText) {
                 <img src="${meme.images.original.url}" alt="${meme.alt_text}" class="meme-sticker" />
             `;
         }
+        document.querySelector(".js-display-memes").innerHTML = htmlFormat;
     }
-
-    document.querySelector(".js-display-memes").innerHTML = htmlFormat;
-
 }
 
 function alertUser(errText) {
-    document.querySelector(".js-display-memes").innerHTML = `
-        <div class="alert alert-warning">${errText}</div>
-    `;
+    document.querySelector(".js-display-memes").innerHTML = `<div class="alert alert-warning">${errText}</div>`;
 }
 
 document.querySelector("#themeForm").addEventListener("change", chooseTheme);
