@@ -1,3 +1,5 @@
+var isDark = true; //default setting for dark mode toggle
+var isGif = true;
 const API_PREFIX_GIFS = "https://api.giphy.com/v1/gifs/search?api_key=";
 const API_PREFIX_STICKERS = "https://api.giphy.com/v1/stickers/search?api_key=";
 const API_KEY = "734eYDXm24Vsbjq8iOtzC0EA1fW9XTyF";
@@ -6,8 +8,6 @@ const H1_LIGHT_TEXT = "Great Memes All Day";
 const H2_LIGHT_TEXT = "Everyday";
 const H1_DARK_TEXT = "Your Meme Dream Team";
 const H2_DARK_TEXT = "You have great memes at your fingertips";
-var isDark = true; //default setting for dark mode toggle
-var isGif = true;
 
 changeText(isDark);
 

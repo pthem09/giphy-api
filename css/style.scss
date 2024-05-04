@@ -22,6 +22,11 @@ body {
     padding: 15px;
 }
 
+input, label {
+    box-sizing: content-box;
+}
+
 .btn-lg {
     min-width: 125px;
+    align-items: center;
 }

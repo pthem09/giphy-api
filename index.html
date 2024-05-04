@@ -21,8 +21,8 @@
 
     <form id="themeForm">
         <div class="form-check form-switch js-dark-light dark-light">
-            <input class="form-check-input" type="checkbox" name="themeChoice" id="darkLightTheme" checked>
-            <label class="form-check-label" for="darkLightTheme">Dark mode</label>
+            <input class="form-check-input theme-check" type="checkbox" name="themeChoice" id="darkLightTheme" checked>
+            <label class="form-check-label theme-label" for="darkLightTheme">Dark mode</label>
         </div>
     </form>
 
@@ -30,11 +30,11 @@
     <h2 id="h2-theme-target"></h2> <!--text filled in by JavaScript upon load-->
 
     <div>
-        <form id="imgChoice" action="." method="get">
-            <div class="btn-group" role="group" aria-label="GIF or Stickers">
+        <form class="col-12 offset-md-2 col-md-8 offset-xl-3 col-xl-6" id="imgChoice" action="." method="get">
+            <div role="group" aria-label="GIF or Stickers">
                 <input type="radio" class="btn-check" name="btnradio" id="gif-radio" checked>
-                <label class="gif-btn gif-selected" id="gif-radio-vis" for="gif-radio">GIFs</label>
-                
+                <label class="gif-btn gif-selected input-" id="gif-radio-vis" for="gif-radio">GIFs</label>
+        
                 <input type="radio" class="btn-check" name="btnradio" id="sticker-radio">
                 <label class="gif-btn" id="sticker-radio-vis" for="sticker-radio">Stickers</label>
             </div>
