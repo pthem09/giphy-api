@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="body-theme">
+
     <form id="themeForm">
-        <div class="form-check form-switch js-dark-light dark-light float-end">
+        <div class="form-check form-switch js-dark-light dark-light">
             <input class="form-check-input" type="checkbox" name="themeChoice" id="darkLightTheme" checked>
             <label class="form-check-label" for="darkLightTheme">Dark mode</label>
         </div>
@@ -28,25 +29,27 @@
     <h1 id="h1-theme-target"></h1> <!--text filled in by JavaScript upon load-->
     <h2 id="h2-theme-target"></h2> <!--text filled in by JavaScript upon load-->
 
-    <form id="imgChoice" action="." method=""get>
-        <div class="btn-group col-12 offset-md-2 col-md-8 offset-xl-3 col-xl-6" role="group" aria-label="GIF or Stickers">
-            <input type="radio" class="btn-check" name="btnradio" id="gif-radio" autocomplete="off" checked>
-            <label class="gif-btn gif-selected" id="gif-radio-vis" for="gif-radio">GIFs</label>
-            
-            <input type="radio" class="btn-check" name="btnradio" id="sticker-radio" autocomplete="off">
-            <label class="gif-btn" id="sticker-radio-vis" for="sticker-radio">Stickers</label>
-        </div>
-    </form>
+    <div>
+        <form id="imgChoice" action="." method="get">
+            <div class="btn-group" role="group" aria-label="GIF or Stickers">
+                <input type="radio" class="btn-check" name="btnradio" id="gif-radio" checked>
+                <label class="gif-btn gif-selected" id="gif-radio-vis" for="gif-radio">GIFs</label>
+                
+                <input type="radio" class="btn-check" name="btnradio" id="sticker-radio">
+                <label class="gif-btn" id="sticker-radio-vis" for="sticker-radio">Stickers</label>
+            </div>
+        </form>
 
-    <form class="col-12 offset-md-2 col-md-8 offset-xl-3 col-xl-6" id="memeForm" action="." method="get">
-        <div class="input-group">
-            <input type="text" class="form-control" name="memeSearch" placeholder="Find your meme..." aria-label="find-meme">
-        </div>
+        <form class="col-12 offset-md-2 col-md-8 offset-xl-3 col-xl-6" id="memeForm" action="." method="get">
+            <div class="input-group">
+                <input type="text" class="form-control" name="memeSearch" placeholder="Find your meme..." aria-label="find-meme">
+            </div>
 
-        <div class="input-group-append">
-            <button class="btn btn-primary btn-lg" type="submit">Search!</button>
-        </div>
-    </form>
+            <div class="input-group-append">
+                <button class="btn btn-primary btn-lg" type="submit">Search!</button>
+            </div>
+        </form>
+    </div>
 
     <section class="js-display-memes display-memes"></section>
 

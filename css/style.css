@@ -12,7 +12,7 @@ body {
     color: darkgoldenrod;
 }
 
-h1, h2, .btn, .form-check-label {
+h1, h2, label, .btn, .form-check-label {
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ h1 {
     font-size: 4rem;
 }
 
-h1, h2, div {
+h1, h2 {
     padding: 15px;
 }
 
@@ -48,6 +48,9 @@ footer, .input-group-append {
 
 .display-memes {
     padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .meme-sticker {
@@ -64,20 +67,34 @@ footer {
 }
 
 .gif-btn {
-    min-width: 350px;
+    min-width: 250px;
     min-height: 50px;
     background-color: grey;
     border-color: grey;
     color: white;
     align-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-check-input:checked, .gif-selected {
     background-color: blue;
     border-color: blue;
 }
-
 .gif-btn::after{
     background-color: orange;
+}
+
+#themeForm {
+    padding-bottom: 50px;
+}
+
+.dark-light {
+    text-align: center;
+    float: right;
+}
+
+div {
+    padding: 15px;
 }

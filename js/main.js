@@ -64,7 +64,7 @@ function fetchMemes(textInput, apiPrefix) {
 function returnImgs(apiText) {
     let htmlFormat = "";
 
-    if (apiText.length === 0 ){
+    if (apiText.data.length === 0 ){
         alertUser("No results -- try another search.");
     } else {
         for (let meme of apiText.data){
@@ -79,7 +79,9 @@ function returnImgs(apiText) {
 }
 
 function alertUser(errText) {
-    document.querySelector(".js-display-memes").innerHTML = `<div class="alert alert-warning">${errText}</div>`;
+    document.querySelector(".js-display-memes").innerHTML = `
+        <div class="alert alert-warning">${errText}</div>
+    `;
 }
 
 document.querySelector("#themeForm").addEventListener("change", chooseTheme);
