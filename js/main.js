@@ -15,6 +15,7 @@ function chooseTheme() {
     isDark = !isDark;
     document.getElementById("body-theme").classList.toggle("body-light");
     document.getElementById("img-theme").classList.toggle("img-light");
+    document.getElementById("theme-label-id").classList.toggle("theme-label-light");
     changeText(isDark);
 }
 
@@ -66,7 +67,7 @@ function returnImgs(apiText) {
 
     //console.log(apiText.data.length);
     if (apiText.data.length === 0 ){
-        alertUser("No results -- try another search.");
+        alertUser("No results.");
     } else {
         for (let meme of apiText.data){
             htmlFormat += `

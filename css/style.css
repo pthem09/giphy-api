@@ -1,18 +1,19 @@
 /*****main styles*******/
 body {
-    max-width: 100vw;
     font-family: "Borel", cursive;
     background-color:black;
     color: white;
-    padding: 15px;
+    padding: 15px 0px;
     text-align: center;
 }
 
-.body-light {
-    font-family: "Orbitron", sans-serif;
-    background-color: white;
-    color: darkgoldenrod;
-    vertical-align: auto;
+input, label {
+    box-sizing: content-box;
+}
+
+.btn-lg {
+    min-width: 125px;
+    align-items: center;
 }
 
 h1, h2, label, .btn, .form-check-label {
@@ -28,7 +29,7 @@ h1 {
 }
 
 h1, h2 {
-    padding: 15px;
+    padding: 15px 0px;
 }
 
 .input-group {
@@ -50,7 +51,7 @@ footer, .input-group-append {
 }
 
 .display-memes {
-    padding: 15px;
+    padding: 15px 0 px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -58,15 +59,13 @@ footer, .input-group-append {
 
 .meme-sticker {
     height: 200px;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
 }
 
 footer {
     margin-top: 15px;
-}
-
-.img-light {
-    filter: invert(1);
 }
 
 .gif-btn, .btn-check {
@@ -80,10 +79,6 @@ footer {
     display: inline-block;
 }
 
-.form-check-input:checked, .gif-selected {
-    background-color: blue;
-    border-color: blue;
-}
 .gif-btn::after{
     background-color: orange;
 }
@@ -98,7 +93,7 @@ footer {
 }
 
 div {
-    padding: 15px;
+    padding: 15px 0px;
 }
 
 .theme-check, .theme-label {
@@ -108,4 +103,25 @@ div {
     align-content: center;
     text-align: center;
     vertical-align: bottom;
+}
+
+/*****styles toggled through JavaScript*******/
+.form-check-input:checked, .gif-selected {
+    background-color: blue;
+    border-color: blue;
+}
+
+.theme-label-light {
+    vertical-align: baseline;
+}
+
+.body-light {
+    font-family: "Orbitron", sans-serif;
+    background-color: white;
+    color: darkgoldenrod;
+    vertical-align: auto;
+}
+
+.img-light {
+    filter: invert(1);
 }
