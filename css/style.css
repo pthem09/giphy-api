@@ -1,5 +1,6 @@
 /*****main styles*******/
 body {
+    max-width: 100%;
     font-family: "Borel", cursive;
     background-color:black;
     color: white;
