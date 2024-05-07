@@ -171,6 +171,5 @@ div {
 @media screen and (min-width: 320px) {
     .display-memes {
         flex-direction: column;
-        background-color: lawngreen;
     }
 }
