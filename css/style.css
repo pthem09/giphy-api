@@ -1,10 +1,32 @@
+/****standard page margin below fixed-top navbar****/
+.page-start {
+    margin-top: 150px;
+}
+
+nav {
+    background-color: black;
+    vertical-align: text-top;
+}
+
+.navbar-toggler {
+    border-color: white;
+    background-color: white;
+}
+
 /*****main styles*******/
-body {
+body, a {
     font-family: "Borel", cursive;
     background-color:black;
     color: white;
     padding: 15px 0px;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    margin: 1rem;
+    align-items: left;
+    text-align: left;
 }
 
 input, label {
@@ -115,11 +137,31 @@ div {
     vertical-align: baseline;
 }
 
-.body-light {
+.body-light, .a-light {
     font-family: "Orbitron", sans-serif;
+}
+
+.body-light {
     background-color: white;
     color: darkgoldenrod;
     vertical-align: auto;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover{
+    color: rgb(0, 102, 255);
+}
+
+.a-light {
+    background-color: white;
+    color: darkgoldenrod;
+}
+
+.a-light:hover {
+    color: black;
 }
 
 .img-light {

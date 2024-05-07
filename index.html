@@ -19,12 +19,25 @@
 </head>
 <body id="body-theme">
 
-    <form id="themeForm">
-        <div class="form-check form-switch js-dark-light dark-light">
-            <input class="form-check-input theme-check" type="checkbox" name="themeChoice" id="darkLightTheme" checked>
-            <label class="form-check-label theme-label" id="theme-label-id" for="darkLightTheme">Dark mode</label>
+    <nav id="giphy-navbar" class="navbar navbar-custom navbar-static-top navbar-expand-lg fixed-top"> <!--id="giphy-navbar"-->
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="navitem">
+                    <a class="nav-link" href="#">Powered by Giphy</a>
+                </li>
+                <li class="navitem">
+                    <a class="nav-link" href="javascript:chooseTheme()">Dark mode</a>
+                </li>
+            </ul>
+            </div>
         </div>
-    </form>
+    </nav>
+
+    <section class="page-start"></section>
 
     <h1 id="h1-theme-target"></h1> <!--text filled in by JavaScript upon load-->
     <h2 id="h2-theme-target"></h2> <!--text filled in by JavaScript upon load-->

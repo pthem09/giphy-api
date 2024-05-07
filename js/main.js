@@ -13,9 +13,22 @@ changeText(isDark);
 
 function chooseTheme() {
     isDark = !isDark;
-    document.getElementById("body-theme").classList.toggle("body-light");
-    document.getElementById("img-theme").classList.toggle("img-light");
-    document.getElementById("theme-label-id").classList.toggle("theme-label-light");
+    document
+        .getElementById("body-theme")
+        .classList
+        .toggle("body-light");
+    document
+        .getElementById("img-theme")
+        .classList
+        .toggle("img-light");
+    document
+        .getElementById("giphy-navbar")
+        .classList
+        .toggle("a-light");
+    for (const item of document.getElementsByTagName("a")) {
+        item.classList.toggle("a-light");
+    }
+    
     changeText(isDark);
 }
 
@@ -29,18 +42,32 @@ function gifBool() {
     }
 */
 
-    document.getElementById("gif-radio-vis").classList.toggle("gif-selected");
-    document.getElementById("sticker-radio-vis").classList.toggle("gif-selected");
+    document
+        .getElementById("gif-radio-vis")
+        .classList
+        .toggle("gif-selected");
+    document
+        .getElementById("sticker-radio-vis")
+        .classList
+        .toggle("gif-selected");
 
 }
 
 function changeText(themeCheck) {
-    if (themeCheck === false) {
-        document.getElementById("h1-theme-target").innerText = H1_LIGHT_TEXT;
-        document.getElementById("h2-theme-target").innerText = H2_LIGHT_TEXT;
+    if (!themeCheck) {
+        document
+            .getElementById("h1-theme-target")
+            .innerText = H1_LIGHT_TEXT;
+        document
+            .getElementById("h2-theme-target")
+            .innerText = H2_LIGHT_TEXT;
     } else {
-        document.getElementById("h1-theme-target").innerText = H1_DARK_TEXT;
-        document.getElementById("h2-theme-target").innerText = H2_DARK_TEXT;
+        document
+            .getElementById("h1-theme-target")
+            .innerText = H1_DARK_TEXT;
+        document
+            .getElementById("h2-theme-target")
+            .innerText = H2_DARK_TEXT;
     }
 }
 function getPrompt(event) {
@@ -82,7 +109,6 @@ function alertUser(errText) {
     document.querySelector(".js-display-memes").innerHTML = `<div class="alert alert-warning">${errText}</div>`;
 }
 
-document.querySelector("#themeForm").addEventListener("change", chooseTheme);
 document.querySelector("#memeForm").addEventListener("submit", getPrompt);
 document.querySelector("#gif-radio").addEventListener("change", gifBool);
 document.querySelector("#sticker-radio").addEventListener("change", gifBool);
