@@ -77,7 +77,6 @@ footer, .input-group-append {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: row;
 }
 
 .meme-sticker {
@@ -171,6 +170,6 @@ div {
 
 @media screen and (min-width: 320px) {
     .display-memes {
-        flex-direction: row;
+        display: block;
     }
 }
