@@ -168,7 +168,7 @@ div {
     filter: invert(1);
 }
 
-@media screen and (min-width: 500px) { /*needs to be 320*/
+@media screen and (min-width: 320px) {
     .display-memes {
         flex-direction: column;
         background-color: lawngreen;
