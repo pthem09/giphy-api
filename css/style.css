@@ -171,6 +171,6 @@ div {
 @media screen and (min-width: 320px) {
     .display-memes {
         display: block;
-        padding: 15%;
+        padding: 0, 15%;
     }
 }
